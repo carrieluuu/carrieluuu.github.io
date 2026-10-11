@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Carrie API is a playful fictional API for exploring Carrie's interests, projects, and favorite things." />
+    <title>Carrie API — Get to know Carrie, one request at a time</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="Carrie API home"><span>{</span> carrie <span>}</span></a>
+      <nav aria-label="Primary navigation">
+        <a aria-current="page" href="/">Overview</a>
+        <a href="/docs/">Docs</a>
+        <a href="/resources/">Resources</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div>
+          <p class="eyebrow">A tiny API with a lot of personality</p>
+          <h1>Get to know Carrie,<br /><em>one request at a time.</em></h1>
+          <p class="lede">Carrie API is a playful developer API for discovering Carrie's interests, projects, favorite things, and the occasional fun fact through simple JSON endpoints.</p>
+          <div class="actions">
+            <a class="button primary" href="/docs/">Read the docs <span>→</span></a>
+            <a class="button secondary" href="/resources/">See resources</a>
+          </div>
+        </div>
+        <div class="terminal" aria-label="Example Carrie API response">
+          <div class="terminal-bar"><i></i><i></i><i></i><span>GET /api/facts/random</span></div>
+          <pre><code><span class="muted">200 OK</span>
+{
+  <span class="key">"fact"</span>: <span class="value">"Carrie loves turning
+  ambitious ideas into
+  thoughtful products."</span>,
+  <span class="key">"category"</span>: <span class="value">"building"</span>,
+  <span class="key">"verified"</span>: <span class="bool">true</span>
+}</code></pre>
+        </div>
+      </section>
+
+      <section class="section">
+        <p class="eyebrow">Explore the API</p>
+        <h2>A friendly interface to all things Carrie.</h2>
+        <p class="section-copy">No keys, complex setup, or rate-limit anxiety. Choose an endpoint and receive a small piece of Carrie's world as structured JSON.</p>
+        <div class="card-grid">
+          <article class="card"><span class="card-number">01</span><h3>About</h3><code>GET /api/about</code><p>A quick introduction to Carrie's background, work, and the things she cares about.</p></article>
+          <article class="card"><span class="card-number">02</span><h3>Interests</h3><code>GET /api/interests</code><p>Browse interests across technology, design, travel, food, and creative projects.</p></article>
+          <article class="card"><span class="card-number">03</span><h3>Random fact</h3><code>GET /api/facts/random</code><p>Receive one lighthearted Carrie fact, perfect for testing your first request.</p></article>
+        </div>
+      </section>
+
+      <section class="cta">
+        <p class="eyebrow">Ready when you are</p>
+        <h2>Make your first request.</h2>
+        <p>Start with the documentation, then copy an example into your favorite API client.</p>
+        <a class="button dark" href="/docs/">Open documentation <span>→</span></a>
+      </section>
+    </main>
+
+    <footer><p>Carrie API is a fictional API built as a crawling and monitoring demo.</p><p>Made with curiosity by Carrie.</p></footer>
+  </body>
+</html>

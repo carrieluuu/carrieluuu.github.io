@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Documentation for Carrie API, including the base URL, available endpoints, response format, and first request." />
+    <title>Carrie API Documentation — Endpoints and responses</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="Carrie API home"><span>{</span> carrie <span>}</span></a>
+      <nav aria-label="Primary navigation"><a href="/">Overview</a><a aria-current="page" href="/docs/">Docs</a><a href="/resources/">Resources</a></nav>
+    </header>
+    <main class="article-layout">
+      <aside><p class="eyebrow">Documentation</p><a href="#quickstart">Quickstart</a><a href="#endpoints">Endpoints</a><a href="#responses">Responses</a></aside>
+      <article>
+        <p class="eyebrow">Carrie API docs</p>
+        <h1>Everything you need to make a request.</h1>
+        <p class="lede">Carrie API is a fictional, read-only JSON API. It needs no authentication, never modifies data, and uses predictable resource-oriented URLs.</p>
+        <section id="quickstart"><h2>Quickstart</h2><p>Send a GET request to the base URL followed by an endpoint. Responses use JSON and include a successful HTTP status code. The demo endpoints below illustrate the intended interface; this static site does not run an API server.</p><pre class="code-block"><code>curl https://carrieluuu.github.io/api/facts/random</code></pre></section>
+        <section id="endpoints"><h2>Endpoints</h2><div class="endpoint"><code>GET /api/about</code><p>Returns a short profile with Carrie's background and current focus.</p></div><div class="endpoint"><code>GET /api/interests</code><p>Returns grouped interests such as building software, thoughtful design, travel, and trying new food.</p></div><div class="endpoint"><code>GET /api/projects</code><p>Returns selected software projects and a short description of each one.</p></div><div class="endpoint"><code>GET /api/facts/random</code><p>Returns one randomly selected, public, lighthearted fact about Carrie.</p></div></section>
+        <section id="responses"><h2>Response format</h2><p>Successful responses contain a <code>data</code> object and a small metadata object. Errors use a stable code and human-readable message. This consistent structure makes the API easy to explore from a browser, script, or API client.</p><pre class="code-block"><code>{
+  "data": {
+    "fact": "Carrie is always planning her next build."
+  },
+  "meta": {
+    "version": "v1"
+  }
+}</code></pre></section>
+        <div class="next-link"><span>Next</span><a href="/resources/">Explore API resources →</a></div>
+      </article>
+    </main>
+    <footer><p>Carrie API is a fictional API built as a crawling and monitoring demo.</p><p>Made with curiosity by Carrie.</p></footer>
+  </body>
+</html>
