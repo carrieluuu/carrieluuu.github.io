@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Explore Carrie API features for discovering public facts, interests, projects, and structured profile information."
+    />
+    <title>Carrie API Features — Simple, playful profile data</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="Carrie API home"
+        ><span>{</span> carrie <span>}</span></a
+      >
+      <nav aria-label="Primary navigation">
+        <a href="/">Overview</a>
+        <a href="/docs/">Docs</a>
+        <a aria-current="page" href="/features/">Features</a>
+        <a href="/guides/first-request/">Guide</a>
+      </nav>
+    </header>
+
+    <main class="page-main">
+      <p class="eyebrow">API features</p>
+      <h1>Small endpoints, thoughtfully structured.</h1>
+      <p class="lede narrow">
+        Carrie API organizes a playful personal profile into predictable JSON
+        resources. Each read-only endpoint is designed to be understandable at
+        a glance and easy to use in a small project.
+      </p>
+
+      <div class="example-list">
+        <section class="example">
+          <div>
+            <span>01</span>
+            <h2>Focused resources</h2>
+            <p>
+              Request a profile, grouped interests, selected projects, or one
+              random fact without downloading unrelated information.
+            </p>
+          </div>
+          <pre class="code-block"><code>GET /api/about
+GET /api/interests
+GET /api/projects
+GET /api/facts/random</code></pre>
+        </section>
+
+        <section class="example">
+          <div>
+            <span>02</span>
+            <h2>Consistent JSON</h2>
+            <p>
+              Every successful response separates its data from version and
+              request metadata, giving clients one stable shape to handle.
+            </p>
+          </div>
+          <pre class="code-block"><code>{
+  "data": { "topic": "building" },
+  "meta": { "version": "v1" }
+}</code></pre>
+        </section>
+
+        <section class="example">
+          <div>
+            <span>03</span>
+            <h2>Safe to explore</h2>
+            <p>
+              The fictional API is read-only and requires no credentials. Its
+              static documentation makes the interface clear without exposing
+              private information or accepting writes.
+            </p>
+          </div>
+          <pre class="code-block"><code>Accept: application/json
+Method: GET
+Authentication: none</code></pre>
+        </section>
+      </div>
+
+      <section class="cta">
+        <p class="eyebrow">See it in action</p>
+        <h2>Make a guided first request.</h2>
+        <a class="button dark" href="/guides/first-request/"
+          >Open the guide <span>→</span></a
+        >
+      </section>
+    </main>
+
+    <footer>
+      <p>Carrie API is a fictional API built as a crawling and monitoring demo.</p>
+      <p>Made with curiosity by Carrie.</p>
+    </footer>
+  </body>
+</html>
