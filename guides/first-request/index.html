@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A step-by-step Carrie API guide for making your first request and reading the JSON response."
+    />
+    <title>Carrie API Guide — Make your first request</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="Carrie API home"
+        ><span>{</span> carrie <span>}</span></a
+      >
+      <nav aria-label="Primary navigation">
+        <a href="/">Overview</a>
+        <a href="/docs/">Docs</a>
+        <a href="/resources/">Resources</a>
+        <a aria-current="page" href="/guides/first-request/">Guide</a>
+      </nav>
+    </header>
+
+    <main class="article-layout">
+      <aside>
+        <p class="eyebrow">First-request guide</p>
+        <a href="#choose">Choose an endpoint</a>
+        <a href="#send">Send the request</a>
+        <a href="#read">Read the response</a>
+      </aside>
+      <article>
+        <p class="eyebrow">Carrie API guide</p>
+        <h1>Make your first request in three small steps.</h1>
+        <p class="lede">
+          Start with a friendly endpoint, send a standard GET request, and
+          inspect the JSON response. No authentication or request body is
+          needed for this fictional API demo.
+        </p>
+
+        <section id="choose">
+          <h2>1. Choose an endpoint</h2>
+          <p>
+            Use the random-fact endpoint for a quick first request. It returns
+            one public, lighthearted detail about Carrie. The endpoint is
+            read-only, so experimenting with it never changes data.
+          </p>
+          <pre class="code-block"><code>GET /api/facts/random</code></pre>
+        </section>
+
+        <section id="send">
+          <h2>2. Send the request</h2>
+          <p>
+            Run the curl command below in a terminal. A real API client could
+            make the same HTTPS request from JavaScript, Python, or another
+            language. The static demo site illustrates the interface and does
+            not provide a live API response.
+          </p>
+          <pre
+            class="code-block"
+          ><code>curl https://carrieluuu.github.io/api/facts/random</code></pre>
+        </section>
+
+        <section id="read">
+          <h2>3. Read the response</h2>
+          <p>
+            A successful response contains a data object with the fact and a
+            metadata object describing the API version. This predictable shape
+            lets a client display the fact while keeping response details
+            separate.
+          </p>
+          <pre class="code-block"><code>{
+  "data": {
+    "fact": "Carrie enjoys building thoughtful developer tools."
+  },
+  "meta": {
+    "version": "v1"
+  }
+}</code></pre>
+        </section>
+
+        <div class="next-link">
+          <span>Continue exploring</span>
+          <a href="/resources/">Browse more API resources →</a>
+        </div>
+      </article>
+    </main>
+
+    <footer>
+      <p>Carrie API is a fictional API built as a crawling and monitoring demo.</p>
+      <p>Made with curiosity by Carrie.</p>
+    </footer>
+  </body>
+</html>
